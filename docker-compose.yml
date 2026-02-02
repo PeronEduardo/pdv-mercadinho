@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: pdv_db
+    environment:
+      POSTGRES_DB: pdv
+      POSTGRES_USER: pdv_user
+      POSTGRES_PASSWORD: pdv_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - pdv_pgdata:/var/lib/postgresql/data
+
+volumes:
+  pdv_pgdata:

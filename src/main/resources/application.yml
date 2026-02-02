@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: pdv
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/pdv
+    username: pdv_user
+    password: pdv_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+server:
+  port: 8080
